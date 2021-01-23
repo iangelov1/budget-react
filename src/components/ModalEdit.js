@@ -18,7 +18,7 @@ function ModalEdit({ isOpen, description, value, isExpense, id }) {
           isExpense={entryUpdate.isExpense}
           setDescription={entryUpdate.setDescription}
           setValue={entryUpdate.setValue}
-          setIsExpense={entryUpdate.setIsExpense}
+          setExpense={entryUpdate.setExpense}
         />
       </Modal.Content>
       <Modal.Actions>

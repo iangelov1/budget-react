@@ -8,13 +8,13 @@ import { closeEditModal } from '../actions/modals.action';
 function useEntryDetails(desc = '', val = '', isExp = true) {
   const [description, setDescription] = useState(desc);
   const [value, setValue] = useState(val);
-  const [isExpense, setIsExpense] = useState(isExp);
+  const [isExpense, setExpense] = useState(isExp);
   const dispatch = useDispatch();
 
   useEffect(() => {
     setDescription(desc);
     setValue(val);
-    setIsExpense(isExp);
+    setExpense(isExp);
 
   }, [desc, val, isExp]);
 
@@ -47,7 +47,7 @@ function useEntryDetails(desc = '', val = '', isExp = true) {
   const resetValues = () => {
     setDescription('');
     setValue('');
-    setIsExpense(true);
+    setExpense(true);
   }
 
   return {
@@ -56,7 +56,7 @@ function useEntryDetails(desc = '', val = '', isExp = true) {
     value,
     setValue,
     isExpense,
-    setIsExpense,
+    setExpense,
     addEntry,
     updateEntry,
   };

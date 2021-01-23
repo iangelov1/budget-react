@@ -1,16 +1,15 @@
-  
-// import modalTypes from '../actions/modals.actions';
+import modalTypes from '../actions/modals.action';
 
 const reducer = (state = { isOpen: false }, action) => {
-  switch (action.type) {
-    case "OPEN_EDIT_MODAL":
-      return { ...state, isOpen: true, id: action.payload.id };
-    case "CLOSE_EDIT_MODAL":
-      return { ...state, isOpen: false, id: null };
+    switch (action.type) {
+        case modalTypes.OPEN_EDIT_MODAL:
+            return { ...state, isOpen: true, id: action.payload.id };
+        case modalTypes.CLOSE_EDIT_MODAL:
+            return { ...state, isOpen: false, id: null };
 
-    default:
-      return state;
-  }
+        default:
+            return state;
+    }
 };
 
 export default reducer;
