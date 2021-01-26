@@ -31,4 +31,4 @@ export const populateEntries = (entries) => {
 
 export const populateEntryDetails = (id, entry) => {
     return { type: types.POPULATE_ENTRY_DETAILS, payload: {id, entry} }
-}
+};

@@ -11,7 +11,6 @@ import NewEntryForm from './components/NewEntryForm';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import axios from 'axios'
 import { getAllEntries } from './actions/entries.actions';
 
 function App () {
@@ -47,11 +46,9 @@ function App () {
 		setIncomeTotal(totalIncomes);
 	}, [entries]);
 
-
-
 	useEffect(() => {
 		dispatch(getAllEntries());
-	}, [])
+	}, [dispatch])
 
 	return (
 		<Container>
