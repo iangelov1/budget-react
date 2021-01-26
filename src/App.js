@@ -26,8 +26,9 @@ function App () {
 	const entries = useSelector(state => state.entries)
 
 	useEffect(() => {
-		const index = entries.findIndex(entry => entry.id === id)
+		const index = entries.findIndex(entry => entry.id === id);
 		setEntry(entries[index]);
+
 	}, [isOpen, id, entries])
 
 	useEffect(() => {
@@ -40,10 +41,12 @@ function App () {
 			}
 			
 			return totalIncomes += Number(entry.value)
-		})
+		});
+
 		setTotal(totalIncomes - totalExpenses);
 		setExpenseTotal(totalExpenses);
 		setIncomeTotal(totalIncomes);
+
 	}, [entries]);
 
 	useEffect(() => {

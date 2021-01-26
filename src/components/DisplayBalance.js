@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { Statistic } from 'semantic-ui-react';
-
 
 function DisplayBalance({ title, value, color="black", size="tiny" }) {
     return (
